@@ -250,7 +250,7 @@ exec --no-startup-id feh --bg-scale ./Pictures/wallpaper.jpg
 # Turn on Night Shift
 exec --no-startup-id redshift
 # Colors
-client.focused			#f06e27 #285577 #ffffff #2e9ef4 #ffffff
+client.focused			#f06e27 #285577 #ffffff #2e9ef4 #ffbc6b
 
 
 #bincode $mod+34 exec killall polybar
