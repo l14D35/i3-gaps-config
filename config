@@ -41,7 +41,11 @@ bindsym $mod+q kill
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+
+# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+
+# dmenu_run with custom font
+bindsym $mod+d exec --no-startup-id dmenu_run -fn 'xos4 Terminus'
 
 # change focus
 bindsym $mod+j focus left
