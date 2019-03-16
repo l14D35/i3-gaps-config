@@ -245,12 +245,19 @@ hide_edge_borders both
 bindcode 107 exec scrot -e 'mv $f ~/Pictures/Screenshots/%b%d::%H%M%S.png'
 bindsym --release Control+Print exec scrot -s -e 'mv $f ~/Pictures/Screenshots/%b%d::%H%M%S.png'
 bindsym --release Shift+Print exec scrot '/tmp/%F_%T_%wx%h.png' -s -e 'xclip -selection clipboard -target image/png -i $f'
+
 # Turn on tapping on touchpad
 exec --no-startup-id xinput set-prop 15 305 1
+
 # Set wallpaper
 exec --no-startup-id feh --bg-scale ./Pictures/wallpaper.jpg
+
 # Turn on Night Shift
 exec --no-startup-id redshift
+
+# Hibernate
+bindsym $mod+Escape exec --no-startup-id i3lock && systemctl suspend
+
 # Colors
 client.focused			#f06e27 #285577 #ffffff #2e9ef4 #ffbc6b
 
