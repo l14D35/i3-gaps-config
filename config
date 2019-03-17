@@ -232,9 +232,11 @@ bindsym $mod+m exec "/usr/local/bin/switch-audio-port"
 
 # Autostart apps
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
 # COMPTON EXEC
 # exec --no-startup-id "compton -i 0.7" 
 exec --no-startup-id "compton" 
+
 exec --no-startup-id nm-applet
 exec --no-startup-id "nitrogen --restore"
 exec --no-startup-id "sleep 2s && kalu"
@@ -242,9 +244,9 @@ exec --no-startup-id "sleep 2s && kalu"
 new_window pixel 1
 hide_edge_borders both
 # Screenshots
-bindcode 107 exec scrot -e 'mv $f ~/Pictures/Screenshots/%b%d::%H%M%S.png'
-bindsym --release Control+Print exec scrot -s -e 'mv $f ~/Pictures/Screenshots/%b%d::%H%M%S.png'
-bindsym --release Shift+Print exec scrot '/tmp/%F_%T_%wx%h.png' -s -e 'xclip -selection clipboard -target image/png -i $f'
+bindcode 107 exec --no-startup-id scrot -e 'mv $f ~/Pictures/Screenshots/%b%d::%H%M%S.png'
+bindsym --release Control+Print exec --no-startup-id scrot -s -e 'mv $f ~/Pictures/Screenshots/%b%d::%H%M%S.png'
+bindsym --release Shift+Print exec --no-startup-id scrot '/tmp/%F_%T_%wx%h.png' -s -e 'xclip -selection clipboard -target image/png -i $f'
 
 # Turn on tapping on touchpad
 exec --no-startup-id xinput set-prop 15 305 1
@@ -257,18 +259,18 @@ exec --no-startup-id redshift
 
 # Multi-moniotrs
 
-bindcode 235 exec ~/.screenlayout/layout-home.sh
+bindcode 235 exec --no-startup-id ~/.screenlayout/layout-home.sh
 
 # Default monitor layout
 
-bindcode 202 exec ~/.screenlayout/layout-default.sh
+bindcode 202 exec --no-startup-id ~/.screenlayout/layout-default.sh
 
 #exec --no-startup-id multi-monitor
 #exec --no-startup-id multi-monitor
 #exec --no-startup-id disconnect-vga
 
 # Hibernate
-bindsym $mod+Escape exec --no-startup-id i3lock && systemctl suspend
+bindsym $mod+Escape exec --no-startup-id i3lock --color 475263 && systemctl suspend
 
 # Colors
 client.focused			#f06e27 #285577 #ffffff #2e9ef4 #ffbc6b
