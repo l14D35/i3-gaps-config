@@ -250,10 +250,22 @@ bindsym --release Shift+Print exec scrot '/tmp/%F_%T_%wx%h.png' -s -e 'xclip -se
 exec --no-startup-id xinput set-prop 15 305 1
 
 # Set wallpaper
-exec --no-startup-id feh --bg-scale ./Pictures/wallpaper.jpg
+# exec --no-startup-id feh --bg-scale ./Pictures/wallpaper.jpg
 
 # Turn on Night Shift
 exec --no-startup-id redshift
+
+# Multi-moniotrs
+
+bindcode 235 exec ~/.screenlayout/layout-home.sh
+
+# Default monitor layout
+
+bindcode 202 exec ~/.screenlayout/layout-default.sh
+
+#exec --no-startup-id multi-monitor
+#exec --no-startup-id multi-monitor
+#exec --no-startup-id disconnect-vga
 
 # Hibernate
 bindsym $mod+Escape exec --no-startup-id i3lock && systemctl suspend
