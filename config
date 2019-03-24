@@ -275,6 +275,5 @@ bindsym $mod+Escape exec --no-startup-id i3lock --color 475263 && systemctl susp
 # Colors
 client.focused			#f06e27 #285577 #ffffff #2e9ef4 #ffbc6b
 
-
 #bincode $mod+34 exec killall polybar
 #bincode $mod+35 exec polybar example
